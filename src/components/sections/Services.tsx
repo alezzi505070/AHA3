@@ -1,13 +1,19 @@
 import { SERVICES } from '@/data/content';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, ArrowUpLeft } from 'lucide-react';
 
 export const Services = () => {
   const [selectedService, setSelectedService] = useState<typeof SERVICES[0] | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    <section id="services" className="py-32 bg-surface relative overflow-hidden content-vis-auto">
+    <section id="services" className="py-32 bg-surface relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[150px] pointer-events-none mix-blend-multiply" />
       
@@ -58,39 +64,42 @@ export const Services = () => {
       </div>
 
       {/* Dialog */}
-      <AnimatePresence>
-        {selectedService && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="absolute inset-0 bg-black/20 backdrop-blur-md"
-              onClick={() => setSelectedService(null)}
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-3xl glass-card bg-surface rounded-3xl p-10 max-h-[85vh] overflow-y-auto"
-            >
-              <button 
+      {mounted && createPortal(
+        <AnimatePresence>
+          {selectedService && (
+            <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4" dir="rtl">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="absolute inset-0 bg-black/40 backdrop-blur-sm"
                 onClick={() => setSelectedService(null)}
-                className="absolute top-8 left-8 w-10 h-10 bg-black/5 hover:bg-black/10 rounded-full flex items-center justify-center text-textMuted hover:text-primary transition-colors"
+              />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                className="relative w-full max-w-3xl glass-card bg-surface rounded-3xl p-8 md:p-10 max-h-[85vh] overflow-y-auto shadow-2xl"
               >
-                <X size={20} />
-              </button>
-              <span className="text-accent text-sm font-semibold tracking-widest mb-2 block">تفاصيل الخدمة</span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-8 pb-6 border-b border-black/10">{selectedService.title}</h2>
-              <div className="text-textPrimary leading-loose whitespace-pre-wrap font-light text-lg">
-                {selectedService.details}
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+                <button 
+                  onClick={() => setSelectedService(null)}
+                  className="absolute top-4 left-4 md:top-8 md:left-8 w-10 h-10 bg-black/5 hover:bg-black/10 rounded-full flex items-center justify-center text-textMuted hover:text-primary transition-colors z-10"
+                >
+                  <X size={20} />
+                </button>
+                <span className="text-accent text-sm font-semibold tracking-widest mb-2 block mt-8 md:mt-0">تفاصيل الخدمة</span>
+                <h2 className="text-2xl md:text-4xl font-serif font-bold text-primary mb-6 md:mb-8 pb-4 md:pb-6 border-b border-black/10 pr-2">{selectedService.title}</h2>
+                <div className="text-textPrimary leading-loose whitespace-pre-wrap font-light text-base md:text-lg px-2 pb-4">
+                  {selectedService.details}
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </section>
   );
 };
