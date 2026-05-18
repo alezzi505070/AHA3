@@ -11,7 +11,6 @@ export const Footer = () => {
           
           <div className="flex flex-col items-center md:items-start text-center md:text-right">
             <span className="text-3xl font-serif text-primary font-bold mb-4">AHA Office</span>
-            <p className="text-textMuted mb-2">عضو معتمد في طلال أبو غزاله وشركاه الدولي</p>
           </div>
 
           <div className="flex flex-col items-center justify-center gap-4">
