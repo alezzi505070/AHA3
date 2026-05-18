@@ -25,10 +25,10 @@ export const Footer = () => {
 
           <div className="flex flex-col items-center md:items-end gap-4">
             <div className="flex gap-4">
-              <a href={`mailto:${CONTACT.email}`} className="w-10 h-10 rounded-full bg-background border border-black/5 shadow-sm flex flex-col items-center justify-center text-textMuted hover:bg-accent/10 hover:text-accent transition-colors">
+              <a href={`mailto:${CONTACT.email}`} className="w-10 h-10 rounded-full bg-background border border-primary/20 shadow-sm flex flex-col items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300">
                 <Mail size={20} />
               </a>
-              <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-background border border-black/5 shadow-sm flex flex-col items-center justify-center text-textMuted hover:bg-accent/10 hover:text-accent transition-colors">
+              <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-background border border-primary/20 shadow-sm flex flex-col items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300">
                 <Phone size={20} />
               </a>
             </div>
