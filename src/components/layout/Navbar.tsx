@@ -98,11 +98,11 @@ export const Navbar = () => {
         href="https://api.whatsapp.com/send?phone=0060173740140"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 left-8 z-[90] bg-[#25D366] text-white p-4 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition-all duration-300"
+        className="fixed bottom-8 left-8 z-[90] bg-primary text-white p-4 rounded-full shadow-[0_0_20px_rgba(62,39,35,0.4)] hover:scale-110 hover:shadow-[0_0_30px_rgba(62,39,35,0.6)] transition-all duration-300"
         title="تواصل معنا مباشرة"
       >
         <MessageCircle size={28} />
-        <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30"></span>
+        <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30"></span>
       </a>
     </>
   );
