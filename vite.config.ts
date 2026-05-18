@@ -4,7 +4,7 @@ import path from "path"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/AHA2/",
+  base: "/AHA3/",
   plugins: [react()],
   resolve: {
     alias: {
