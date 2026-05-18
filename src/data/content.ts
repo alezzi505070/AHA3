@@ -1,7 +1,5 @@
 export const NAV_LINKS = [
   { label: "من نحن", href: "#about" },
-  { label: "رسالتنا", href: "#mission" },
-  { label: "رؤيتنا", href: "#vision" },
   { label: "قيمنا ومبادئنا", href: "#values" },
   { label: "خدماتنا", href: "#services" },
   { label: "عملاؤنا", href: "#clients" },
