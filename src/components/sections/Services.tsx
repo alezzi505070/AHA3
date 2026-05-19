@@ -41,7 +41,7 @@ export const Services = () => {
               transition={{ delay: idx * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10, scale: 1.02, rotateX: 5, rotateY: -5, z: 30 }}
               whileTap={{ scale: 0.98, rotateX: 0, rotateY: 0, z: 0 }}
-              className="glass-card p-10 rounded-3xl group cursor-pointer hover:border-accent/30 transition-all duration-500 relative overflow-hidden shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transform-style-3d"
+              className="glass-card p-10 rounded-3xl group cursor-pointer hover:border-accent/30 transition-colors transition-shadow duration-500 relative overflow-hidden shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transform-style-3d"
               onClick={() => setSelectedService(service)}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

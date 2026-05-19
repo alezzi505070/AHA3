@@ -28,7 +28,7 @@ export const WhyUs = () => {
               transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -8, scale: 1.02, rotateX: 3, rotateY: -3, z: 20 }}
               whileTap={{ scale: 0.98 }}
-              className="glass-card bg-background p-8 rounded-3xl flex items-start gap-5 relative group overflow-hidden border border-black/5 hover:border-accent/30 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] transition-all duration-500 transform-style-3d"
+              className="glass-card bg-background p-8 rounded-3xl flex items-start gap-5 relative group overflow-hidden border border-black/5 hover:border-accent/30 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] transition-colors transition-shadow duration-500 transform-style-3d"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="bg-accent/10 p-2 rounded-xl group-hover:bg-accent/20 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 relative z-20 flex-shrink-0">
