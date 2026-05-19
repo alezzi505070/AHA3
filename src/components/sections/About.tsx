@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const About = () => {
   return (
-    <section id="about" className="py-32 bg-background text-textPrimary relative overflow-hidden content-vis-auto">
+    <section id="about" className="py-32 bg-background text-textPrimary relative overflow-hidden">
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] pointer-events-none mix-blend-multiply" />
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">

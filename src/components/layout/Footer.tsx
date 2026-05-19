@@ -3,7 +3,7 @@ import { Mail, Phone } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-surface text-textPrimary relative border-t border-black/5 pt-16 pb-8 content-vis-auto">
+    <footer className="bg-surface text-textPrimary relative border-t border-black/5 pt-16 pb-8">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-50" />
       
       <div className="container mx-auto px-6">

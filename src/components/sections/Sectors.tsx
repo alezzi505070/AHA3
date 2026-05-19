@@ -4,7 +4,7 @@ import * as Icons from 'lucide-react';
 
 export const Sectors = () => {
   return (
-    <section id="clients" className="py-32 bg-background text-textPrimary relative content-vis-auto">
+    <section id="clients" className="py-32 bg-background text-textPrimary relative">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

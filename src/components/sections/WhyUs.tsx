@@ -4,13 +4,13 @@ import { CheckCircle2 } from 'lucide-react';
 
 export const WhyUs = () => {
   return (
-    <section id="values" className="py-32 bg-surface text-textPrimary relative overflow-hidden content-vis-auto">
+    <section id="values" className="py-32 bg-surface text-textPrimary relative overflow-hidden">
       <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] pointer-events-none mix-blend-multiply" />
       <div className="container mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.2 }}
           className="text-center mb-20"
         >
           <span className="text-accent tracking-widest text-sm font-semibold uppercase mb-4 block">قيمنا</span>
@@ -24,7 +24,7 @@ export const WhyUs = () => {
               key={idx}
               initial={{ opacity: 0, y: 40, rotateX: 10 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -8, scale: 1.02, rotateX: 3, rotateY: -3, z: 20 }}
               whileTap={{ scale: 0.98 }}

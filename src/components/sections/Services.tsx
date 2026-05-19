@@ -21,7 +21,7 @@ export const Services = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.2 }}
           className="text-center mb-20"
         >
           <span className="text-accent tracking-widest text-sm font-semibold uppercase mb-4 block">خبراتنا</span>
@@ -37,7 +37,7 @@ export const Services = () => {
               key={service.id}
               initial={{ opacity: 0, y: 40, rotateX: 10 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: idx * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -10, scale: 1.02, rotateX: 5, rotateY: -5, z: 30 }}
               whileTap={{ scale: 0.98, rotateX: 0, rotateY: 0, z: 0 }}
