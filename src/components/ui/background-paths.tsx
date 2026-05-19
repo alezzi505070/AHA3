@@ -108,11 +108,20 @@ export function BackgroundPaths({
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1, duration: 1 }}
-                            className="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 mb-10 font-light"
+                            className="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 mb-6 font-light"
                         >
                             {slogan}
                         </motion.p>
                     )}
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.2, duration: 1 }}
+                        className="text-sm md:text-base font-semibold text-primary/80 mb-10 tracking-widest uppercase"
+                    >
+                        اليمن | صنعاء | Yemen | Sana'a
+                    </motion.div>
 
                     <div className="inline-block group mt-8">
                         <Button
